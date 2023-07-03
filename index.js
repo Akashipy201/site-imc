@@ -20,7 +20,13 @@ function IMC(valor1, valor2){
 btn.addEventListener("click", ()=>{
     if(altura.value !== "" && peso.value !==""){
         let valor = IMC(altura.value, peso.value)
-        resposta.innerHTML = valor
+        if(valor!== NaN){
+            resposta.innerHTML = valor
+
+        }
+        else{
+            alert("Deu erro no sistema, porfavor tente novamente")
+        }
 
     }
     else{
