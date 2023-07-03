@@ -8,6 +8,7 @@ function IMC(valor1, valor2){
     let valor_altura = parseFloat(valor1.replace(",", "."))
 
     let imc = (Math.floor(valor2)/(valor_altura*valor_altura)).toFixed(2)
+    
     return imc 
     
 }
@@ -17,11 +18,16 @@ function IMC(valor1, valor2){
 
 btn.addEventListener("click", ()=>{
 
-    if(altura.value !== "" && peso.value !==""){
+    if(altura.value != "" && peso.value !=""){
         let valor = IMC(altura.value, peso.value)
+   
         if(valor !=  "NaN"){
-            resposta.value = valor
+            resposta.innerHTML = valor
         }
+        else{
+            resposta.innerHTML= "Error, tente novamente!"
+        }
+        
 
     }
     else{
