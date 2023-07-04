@@ -29,6 +29,11 @@ function IMC(valor1, valor2){
     else if (Number(imc) > 40.0){
         return `O seu IMC é ${imc.replace(".",",")} <br/>Alerta de Obesidade grau 3 !!!<br/> Aqui o sinal é vermelho, com forte probabilidade de já existirem doenças muito graves associadas. O tratamento deve ser ainda mais urgente.`
     }
+
+    else{
+        return ""
+    }
+
 }
 
 
@@ -38,7 +43,7 @@ btn.addEventListener("click", ()=>{
     if(altura.value != "" && peso.value !=""){
         let valor = IMC(altura.value, peso.value)
    
-        if(valor !=  "NaN"){
+        if(valor !=  "NaN" || valor != "undefined"  || valor != undefined){
             resposta.innerHTML = valor
         }
         else{

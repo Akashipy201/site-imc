@@ -6,8 +6,8 @@
 
 #caixa{
     display: flex;
-    width: 200px;
-    height: 300px;
+    width: 260px;
+    height: 500px;
     background-color: orange;
     margin: auto;
     position: relative;
@@ -17,16 +17,18 @@
     align-items: center;
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 1px 1px 1px 1px #fff;
+
 }
 
 input{
     border: none;
-    position: relative;
-    left: 10px;
+    width: 200px;
     border-radius: 20px;
     background-color: #f6f6f6;
-    padding-left: 5px;
     cursor: pointer;
+    justify-content: center;
+    padding-left: 10px;
 }
 
 #titulo{
@@ -37,7 +39,7 @@ input{
 }
 
 
-label{
+.label{
     padding-left: 10px;
     font-size: 20px;
     color: aliceblue;
@@ -58,5 +60,9 @@ button{
 
 #resposta{
     text-align: center;
-    font-size: 12px;
+    font-size: 15px;
+}
+
+div{
+    margin-bottom: 30px;
 }
