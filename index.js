@@ -43,7 +43,7 @@ btn.addEventListener("click", ()=>{
     if(altura.value != "" && peso.value !=""){
         let valor = IMC(altura.value, peso.value)
    
-        if(valor !=  "NaN" || valor != "undefined"  || valor != undefined){
+        if(valor !=  "NaN" ){
             resposta.innerHTML = valor
         }
         else{
